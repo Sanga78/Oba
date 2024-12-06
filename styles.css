@@ -69,9 +69,13 @@ section {
 header i{
     color: var(--white);
 }
+.header > div{
+    display: flex;
+    align-items: center;
+}
 .header > div img{
-    width: 30px;
-    height: auto;
+    height: 4rem;
+    color: #010103;
 }
 .btn,
 button {
@@ -116,9 +120,9 @@ button {
 
 .header .navbar a:hover {
     color: var(--main-color);
-    /* border-bottom: 0.1rem solid var(--main-color); */
+    border-bottom: 0.1rem solid var(--main-color);
     padding-bottom: 0.5rem;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .header .login-icon {
@@ -604,24 +608,25 @@ figcaption{
     & p {
       transform: translateY(20px);
       opacity: 0;
+      max-width: 80%;
     }
 
     & p:nth-of-type(1) {
       font-weight: 900;
-      font-size: 0.9rem;
+      font-size: 1.4rem;
     }
 
     & p:nth-of-type(2) {
       font-style: italic;
       font-weight: 400;
       margin-top: 1rem;
-      font-size: 0.8rem;
+      font-size: 1.2rem;
       color: rgba(255,255,255,0.7);
     }
 
     & p:nth-of-type(3) {
       color: rgba(255,255,255,0.7);
-      font-size: 0.65rem;
+      font-size: 1rem;
     }
     & p:nth-of-type(4) {
       color: rgba(255,255,255,0.7);
@@ -687,3 +692,18 @@ figcaption{
 }
 
 .expand { width: 1.75rem; }
+@media(max-width: 450px) {
+    .item {
+      & .testimonial{
+        width: 90%;
+        padding: 1rem;
+        padding-right: 1.2rem;
+      }    
+      & .image {
+        width: 30%;
+      }
+    }
+    .slider {
+        width: min(100vw,250px);
+      } 
+}
