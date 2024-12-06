@@ -261,17 +261,23 @@ figcaption{
 .blogs{
     color: var(--white);
 }
-.blogs .box-container ol{
+.blogs .box-container ul{
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
 }
-.blogs .box-container ol li{
+.blogs .box-container ul li{
     font-weight: bolder;
     padding: 5px 0;
+    font-size: 2rem;
 }
-.blogs .box-container ol li span{
+.blogs .box-container ul li span{
     font-weight: 100;
+    font-size: 1.5rem;
+    display: none;
+}
+.blogs .box-container ul li:hover > span{
+    display: block;
 }
 .about{
     font-size: 1.5rem;
