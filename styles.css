@@ -69,6 +69,10 @@ section {
 header i{
     color: var(--white);
 }
+.header > div img{
+    width: 30px;
+    height: auto;
+}
 .btn,
 button {
     margin-top: 1rem;
@@ -112,8 +116,9 @@ button {
 
 .header .navbar a:hover {
     color: var(--main-color);
-    border-bottom: 0.1rem solid var(--main-color);
+    /* border-bottom: 0.1rem solid var(--main-color); */
     padding-bottom: 0.5rem;
+    text-decoration: underline;
 }
 
 .header .login-icon {
