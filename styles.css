@@ -22,7 +22,6 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: 0.2s linear;
 }
 
@@ -106,6 +105,7 @@ button {
     left: 0;
     right: 0;
     z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .header .logo img {
@@ -116,13 +116,13 @@ button {
     margin: 0 1rem;
     font-size: 1.6rem;
     color: var(--white);
+    text-transform: capitalize;
 }
 
 .header .navbar a:hover {
-    color: var(--main-color);
-    border-bottom: 0.1rem solid var(--main-color);
+    border-bottom: .3rem solid var(--main-color);
     padding-bottom: 0.5rem;
-    /* text-decoration: underline; */
+    border-radius: 1px;
 }
 
 .header .login-icon {
@@ -181,12 +181,24 @@ button {
     font-style: italic;
 }
 
+.home .content h3 span{
+    background: linear-gradient(to right,#6157FF,#EE49FD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
 .home .content p {
     font-size: 1rem;
     font-weight: lighter;
     line-height: 1.8;
     padding: 1rem 0;
     color: var(--white);
+}
+.home .content a:hover{
+    transition: 1.2s;
+  background: linear-gradient(to right bottom,green,#4776E6);
+/* background: linear-gradient(to left top,var(--main-color), var(--black)); */
 }
 .profile_pic{
     animation: fade-in-left 1s ease-out forwards;
@@ -246,13 +258,21 @@ figcaption{
     flex: 1 1 45rem;
     padding: 2rem;
 }
-
-.background .row .content h3 {
+.background .row h1 {
     font-size: 3rem;
     color: var(--white);
 }
-
+.background .row .content h3 {
+    font-size: 2.5rem;
+    color: var(--white);
+}
+.background .row .content .story{
+    border: 1px solid var(--white);
+    border-radius: 0 120px 0 0;
+    padding: 2rem 5rem;
+}
 .background .row .content p {
+    text-align: justify;
     font-size: 1.6rem;
     color: var(--white);
     padding: 1rem 0;
@@ -326,16 +346,24 @@ figcaption{
 
 .contacts .row h3 {
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--white);
 }
+.contacts .row p a{
+    color: rgb(18, 125, 219);
+}
+.contacts .row p{
+    cursor: pointer;
+    color: var(--white);  
+}
 .contacts .row p span{
-    color: var(--white);
+    color: var(--main-color);
 }
 .footer {
     background: var(--black);
     text-align: center;
     padding: 2rem 0;
+    text-transform: capitalize;
 }
 
 .footer .share {
