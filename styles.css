@@ -1,5 +1,5 @@
 :root {
-    --main-color: green;
+    --main-color: rgb(117, 66, 236);
     --black: #13131a;
     --bg: #010103;
     --border: 0.1rem solid rgba(255, 255, 255, 0.3);
@@ -7,7 +7,7 @@
     --home-background-image: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url('assets/clint-patterson-dYEuFB8KQJk-unsplash.jpg');
 }
 .dark-mode {
-    --main-color: green;
+    --main-color: rgb(117, 66, 236);
     --black: rgba(255, 255, 255);
     --bg: rgb(245, 245, 245);
     --border: 0.1rem solid rgba(16, 11, 11, 0.3);
@@ -62,7 +62,11 @@ section {
 }
 
 .heading span {
-    color: var(--main-color);
+    background: linear-gradient(to right,#6157FF,#EE49FD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
     text-transform: uppercase;
 }
 header i{
@@ -90,7 +94,7 @@ button {
 
 .btn:hover {
     letter-spacing: 0.2rem;
-    background: green;
+    background: linear-gradient(to right,#6157FF,#EE49FD);
 }
 
 .header {
@@ -157,7 +161,7 @@ button {
 }
 
 .home {
-    min-height: 90vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -189,16 +193,15 @@ button {
   color: transparent;
 }
 .home .content p {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: lighter;
-    line-height: 1.8;
-    padding: 1rem 0;
+    /*   */
+    /* padding: 1rem 0; */
     color: var(--white);
 }
 .home .content a:hover{
     transition: 1.2s;
-  background: linear-gradient(to right bottom,green,#4776E6);
-/* background: linear-gradient(to left top,var(--main-color), var(--black)); */
+    background: linear-gradient(to right,#6157FF,#EE49FD);
 }
 .profile_pic{
     animation: fade-in-left 1s ease-out forwards;
@@ -213,28 +216,7 @@ button {
       transform: translateX(0);
     }
   }
-figure {
-    border: var(--border);
-    padding: 30px;
-    margin: 0;
-    border-radius: 200px 200px 200px 0;
-    color: var(--white);
-}
-  
-figure:hover {
-    background-color: rgba(255, 253, 253, 0.423);
-    transform: scale(1.2);
-    transition: all 0.2s ease-in-out;
-}
-  
-figure img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-}
-figcaption{
-    font-size: 1rem;
-}
+
 
 .home .content a {
     background-color: transparent;
@@ -252,25 +234,24 @@ figcaption{
     background: var(--black);
     flex-wrap: wrap;
     animation: slideInRight 1s ease-in-out;
+    padding: 2rem;
+    text-align: center;
 }
 
 .background .row .content {
     flex: 1 1 45rem;
-    padding: 2rem;
+   
 }
 .background .row h1 {
     font-size: 3rem;
     color: var(--white);
+    padding: 1rem;
 }
 .background .row .content h3 {
     font-size: 2.5rem;
     color: var(--white);
 }
-.background .row .content .story{
-    border: 1px solid var(--white);
-    border-radius: 0 120px 0 0;
-    padding: 2rem 5rem;
-}
+
 .background .row .content p {
     text-align: justify;
     font-size: 1.6rem;
@@ -279,6 +260,29 @@ figcaption{
     line-height: 1.8;
 }
 
+.background .row >div{
+    padding: 1rem;
+    color: var(--white);
+}
+
+.background .row .person_1{
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+}
+.background .row .person_1 .title{
+    flex: 1 1 auto;
+    font-size: 2rem;
+}
+.background .row .person_1 h2{
+background: linear-gradient(to right,#6157FF,#EE49FD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
 .background .about_content {
     display: none;
 }
@@ -414,7 +418,7 @@ figcaption{
 .footer .credit span {
     color: var(--main-color);
 }
-/* @keyframes fadeIn {
+@keyframes fadeIn {
     from {
         opacity: 0;
     }
@@ -444,25 +448,25 @@ figcaption{
       opacity: 1;
       transform: translateY(0);
     }
-} */
+} 
   
-/* @keyframes slideInLeft {
+@keyframes slideInLeft {
     from {
         transform: translateX(-100%);
     }
     to {
         transform: translateX(0);
     }
-} */
+} 
 
-/* @keyframes slideInRight {
+@keyframes slideInRight {
     from {
         transform: translateX(100%);
     }
     to {
         transform: translateX(0);
     }
-} */
+}
 
 @keyframes zoomIn {
     from {
@@ -612,7 +616,7 @@ figcaption{
   list-style-type: none;
   display: flex;
   transition: transform 1.25s;
-  /* gap: 1.2rem; */
+  gap: 1.2rem;
 }
 
 .item {
